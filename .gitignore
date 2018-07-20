@@ -5,6 +5,7 @@
 
 # testing
 /coverage
+/hw_instructions
 
 # production
 /build
