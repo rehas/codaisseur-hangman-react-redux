@@ -4,22 +4,71 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 60px;
+  height: 30px;
 }
 
 .App-header {
   background-color: #222;
-  height: 100px;
-  padding: 20px;
+  height: 60px;
+  padding: 10px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.user-guess input {
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+.user-guess .guess-button{
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+.current-word{
+  font-size: 60px;
+  margin : 20px;
+}
+.current-word-container{
+  margin : 60px;
+  color : darkgray;
+}
+.win-lose{
+  color:red;
+}
+
+.game-status{
+  font-size: large;
+  border: 2px solid blue;
+  width: 50%;
+  margin: auto;
+  margin-top : 50px;
+  padding: 15px;
+}
+
+.counter{
+  border: 2px solid lightcoral;
+  width: 15%;
+  margin: auto;
+}
+
+.new-game{
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: green;
+}
+
+.instructions li{
+  list-style-type: none;
+  font-size: large;
+  font-family: Verdana, sans-serif;
+  line-height: 2em;
 }
 
 @keyframes App-logo-spin {
