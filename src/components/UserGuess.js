@@ -13,7 +13,7 @@ export default class UserGuess extends React.PureComponent{
 
   handleSubmit(event){
     event.preventDefault();
-    const newGuess = event.target.guessedCharacter.value;
+    const newGuess = event.target.guessedCharacter.value.toLowerCase();
     if(newGuess === "" || newGuess === '' || newGuess === ' ' ){
       event.target.guessedCharacter.value = ''
       alert("There are no spaces in our word don't worry :)")
