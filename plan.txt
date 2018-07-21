@@ -1,0 +1,20 @@
+HangMan Game
+-------------
+
++- Project Setup
+  +React
+  +Redux
+    +DevTools
+
+HERE>>- Welcome Page - '/'
+  -Welcome Message
+  -Link to game (start Game) -> '/hangman'
+
+-> Check the action creators in the gameLogic.
+
+- Store
+  - The word being guessed (Chosen randomly from pool)
+  - All the letters guessed so far.
+
+- Game Start '/hangman'
+  - Display random word from pool
