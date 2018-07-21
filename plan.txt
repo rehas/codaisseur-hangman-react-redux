@@ -12,9 +12,11 @@ HangMan Game
 
 -> Check the action creators in the gameLogic.
 
-HERE>>- Store
-  - The word being guessed (Chosen randomly from pool)
-  - All the letters guessed so far.
+- Store
+  +Setup Reducers for
+    +The word being guessed (Chosen randomly from pool)
+    +All the letters guessed so far.
+  - Implement action handlers based on the game logic
 
-- Game Start '/hangman'
+HERE>>- Game Start '/hangman'
   - Display random word from pool
