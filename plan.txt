@@ -11,7 +11,7 @@ HangMan Game
   -Link to game (start Game) -> '/hangman' +
 
 -> Check the action creators in the gameLogic.
--> Re-read insturctions
+HERE->-> Re-read insturctions
 
 - Store
   +Setup Reducers for
@@ -25,7 +25,7 @@ HangMan Game
     +As underscores
   +- Show user input and listen to it
       + When user enters input make sure it's only 1 character long
-        HERE->- make sure its a character, not non-character
+        + make sure its a character, not non-character
           ('Alert user)
         
       - When user submits the guess:

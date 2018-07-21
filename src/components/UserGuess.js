@@ -13,16 +13,30 @@ export default class UserGuess extends React.PureComponent{
       event.target.value = event.target.value.slice(0,1)
       return 
     }
+
+    
   }
 
   handleSubmit(event){
     event.preventDefault();
     const newGuess = event.target.guessedCharacter.value;
     // Check if the user is sending empty character
-    if(newGuess === "" || newGuess === '' ){
+    if(newGuess === "" || newGuess === '' || newGuess === ' ' ){
       event.target.guessedCharacter.value = ''
       return
     }
+
+
+
+    if(newGuess.match(/[^a-z|^A-Z|]/)){
+      // alert('its an a')
+      event.target.guessedCharacter.value = ''
+      return
+    }
+
+
+
+
     const prevGuesses = store.getState().userGuesses.previousGuesses
 
     console.log(prevGuesses);

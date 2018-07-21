@@ -41,7 +41,10 @@ class GamePageContainer extends React.PureComponent{
         <p>{this.props.currentWord.currentWord}</p>
         <CurrentWord currentWordState = {Game.showGuess(this.props.currentWord, this.props.userGuesses)}/>
         <WrongGuessCount counter = {Game.wrongGuessCount(this.props.currentWord, this.props.userGuesses)}/>
+        
+        {gameOver? '' : 
         <UserGuess/>
+        }
         <button onClick={this.newGameButtonClicked}>NEW GAME</button>
       </div>
     )
