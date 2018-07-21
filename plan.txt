@@ -11,6 +11,7 @@ HangMan Game
   -Link to game (start Game) -> '/hangman' +
 
 -> Check the action creators in the gameLogic.
+HERE>>-> Re-read insturctions
 
 - Store
   +Setup Reducers for
@@ -21,4 +22,13 @@ HangMan Game
 
 - Game Start '/hangman'
   +- Display random word from pool
-  HERE>>- Show user input and listen to it
+    +As underscores
+  +- Show user input and listen to it
+      + When user enters input make sure it's only 1 character long
+        - make sure its a character, not non-character
+      - When user submits the guess:
+        +dispatch an action to set the store state for guesses
+          -if guess is right
+            +re_render shown word
+          -if wrong increment wrong guess count
+          +clearSubmitForm 
