@@ -11,7 +11,7 @@ HangMan Game
   -Link to game (start Game) -> '/hangman' +
 
 -> Check the action creators in the gameLogic.
-HERE>>-> Re-read insturctions
+-> Re-read insturctions
 
 - Store
   +Setup Reducers for
@@ -31,4 +31,18 @@ HERE>>-> Re-read insturctions
           -if guess is right
             +re_render shown word
           -if wrong increment wrong guess count
-          +clearSubmitForm 
+          +clearSubmitForm
++ Wrong Guess Count
+  + Display the number of wrong guesses
+
+- New Game Button
+  - Reset game to new game,
+    -Pick new word
+    -Empty out the previous guesses
+
+
+- Styling
+
+- Make sure it runs with only yarn install / start
+  - Download it to a blind folder
+    -test

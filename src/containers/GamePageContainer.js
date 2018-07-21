@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import store from '../store'
 import UserGuess from '../components/UserGuess'
 import CurrentWord from '../components/CurrentWord'
+import WrongGuessCount from '../components/WrongGuessCount'
 
 
 class GamePageContainer extends React.PureComponent{
@@ -20,6 +21,7 @@ class GamePageContainer extends React.PureComponent{
         <p> You're playing Hang Man</p>
         <p>{this.props.currentWord.currentWord}</p>
         <CurrentWord currentWordState = {Game.showGuess(this.props.currentWord, this.props.userGuesses)}/>
+        <WrongGuessCount counter = {Game.wrongGuessCount(this.props.currentWord, this.props.userGuesses)}/>
         <UserGuess/>
       </div>
     )
