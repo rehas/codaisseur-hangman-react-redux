@@ -1,14 +1,14 @@
 HangMan Game
 -------------
 
-+- Project Setup
++ Project Setup
   +React
   +Redux
     +DevTools
 
-- Welcome Page - '/'
-  -Welcome Message +
-  -Link to game (start Game) -> '/hangman' +
++ Welcome Page - '/'
+  +Welcome Message +
+  +Link to game (start Game) -> '/hangman' +
 
 -> Check the action creators in the gameLogic.
 -> Re-read insturctions
@@ -34,7 +34,7 @@ HangMan Game
         + make sure it doesn't exist in the previous guesses
           ('Alert user)
         +dispatch an action to set the store state for guesses
-          -if guess is right
+          +if guess is right
             +re_render shown word
           +if wrong increment wrong guess count
           +clearSubmitForm
@@ -68,8 +68,9 @@ HangMan Game
 
 + Clean Code
 
-HERE->- Styling
++ Styling
 
-- Make sure it runs with only yarn install / start
++ Make sure it runs with only yarn install / start
   - Download it to a blind folder
     -test
+    -yarn install --ignore-engines work
