@@ -1,8 +1,6 @@
 import * as React from 'react'
 import store from '../store'
 import * as Game from '../lib/game'
-// import { connect } from 'react-redux';
-
 
 export default class UserGuess extends React.PureComponent{
   handleChange(event){
@@ -13,8 +11,6 @@ export default class UserGuess extends React.PureComponent{
       event.target.value = event.target.value.slice(0,1)
       return 
     }
-
-    
   }
 
   handleSubmit(event){
@@ -26,18 +22,13 @@ export default class UserGuess extends React.PureComponent{
       return
     }
 
-
-
     if(newGuess.match(/[^a-z|^A-Z|]/)){
       // alert('its an a')
       event.target.guessedCharacter.value = ''
       return
     }
 
-
-
-
-    const prevGuesses = store.getState().userGuesses.previousGuesses
+    const prevGuesses = store.getState().previousGuesses
 
     console.log(prevGuesses);
     console.log(prevGuesses.indexOf(newGuess));
@@ -51,17 +42,15 @@ export default class UserGuess extends React.PureComponent{
   }
   
   render(){
-
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>
-                        Guess 
+          <label> Guess 
             <input 
               type="text" 
               onChange={this.handleChange}
               name = "guessedCharacter"
-                         />
+            />
           </label>
           <input type="submit" value="Guess"/>
         </form>
@@ -69,15 +58,3 @@ export default class UserGuess extends React.PureComponent{
     )
   }
 }
-
-// const mapStateToProps = state =>{
-//   return {
-//       userGuesses: state.userGuesses.previousGuesses
-//   }
-// }
-
-// export default connect(mapStateToProps)(UserGuess)
-
-// onChange={this.handleChange}
-// value = {this.state.name}
-             

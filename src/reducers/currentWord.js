@@ -1,14 +1,9 @@
 import {NEW_GAME} from '../lib/game'
 
-const initialState = {
-  currentWord: ''
-}
+const initialState = ''
 export default (state = initialState, action = {}) => {
   if (action.type === NEW_GAME){
-    return {
-      ...state,
-      currentWord : action.payload
-    }
+    return action.payload
   }
   return state
 }

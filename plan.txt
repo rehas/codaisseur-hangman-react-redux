@@ -11,16 +11,18 @@ HangMan Game
   -Link to game (start Game) -> '/hangman' +
 
 -> Check the action creators in the gameLogic.
-HERE->-> Re-read insturctions
+-> Re-read insturctions
 
-- Store
+
+
++ Store
   +Setup Reducers for
     +The word being guessed (Chosen randomly from pool)
     +All the letters guessed so far.
-  - Implement action handlers based on the game logic
+  + Implement action handlers based on the game logic
     +-NewGame sets store state to new random word
 
-- Game Start '/hangman'
++ Game Start '/hangman'
   +- Display random word from pool
     +As underscores
   +- Show user input and listen to it
@@ -28,7 +30,7 @@ HERE->-> Re-read insturctions
         + make sure its a character, not non-character
           ('Alert user)
         
-      - When user submits the guess:
+      + When user submits the guess:
         + make sure it doesn't exist in the previous guesses
           ('Alert user)
         +dispatch an action to set the store state for guesses
@@ -38,11 +40,12 @@ HERE->-> Re-read insturctions
           +clearSubmitForm
 
 + End Scenarios
-  - User Won
+  + User Won
     - If there are no more underscores the user wins
     - Mesasge the win ('Alert user)
-  - User Lost
+  + User Lost
     - If there are still underscores but wrong guess counter is 6 user loses
+    + Show the word that user couldn't guess
     - Message the loss ('Alert user)
 + Wrong Guess Count
   + Display the number of wrong guesses
@@ -52,8 +55,20 @@ HERE->-> Re-read insturctions
     +Pick new word
     +Empty out the previous guesses
 
+- dispatch Actions as soon as they're called?
+  -No, there are only two actions dispatched in the 
+- implement a game status component?
+  + Show game status
+    + Going on
+    + win
+    + lose
+  - Wrong guess count
+  - Wrong input
+  - Previous guesses
 
-- Styling
+- Clean Code
+
+HERE->- Styling
 
 - Make sure it runs with only yarn install / start
   - Download it to a blind folder

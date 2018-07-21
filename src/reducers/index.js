@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import currentWord from './currentWord'
-import userGuesses from './userGuesses'
+import previousGuesses from './previousGuesses'
 
 // const reducer = (state = {key:[]}, action = {}) => {
 //   switch (action.type) {
@@ -11,5 +11,5 @@ import userGuesses from './userGuesses'
 
 export default combineReducers({
   currentWord,
-  userGuesses
+  previousGuesses
 })
