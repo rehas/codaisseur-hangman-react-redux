@@ -17,7 +17,6 @@ class App extends Component {
       To get started, click <code>Start Game Link</code> and have fun guessing.
         </p>
         <hr/>
-
         <main>
           <Route exact path = '/' component = {WelcomePage} />
           <Route exact path = '/hangman' component = {GamePageContainer} />

@@ -57,16 +57,16 @@ HangMan Game
 
 - dispatch Actions as soon as they're called?
   -No, there are only two actions dispatched in the 
-- implement a game status component?
++ implement a game status component?
   + Show game status
     + Going on
     + win
     + lose
-  - Wrong guess count
-  - Wrong input
-  - Previous guesses
+  + Wrong guess count
+  + Wrong input
+  + Previous guesses
 
-- Clean Code
++ Clean Code
 
 HERE->- Styling
 

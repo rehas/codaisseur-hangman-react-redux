@@ -4,10 +4,15 @@ import { connect } from 'react-redux';
 
 class GameStatusContainer extends React.PureComponent{
   render(){
-    const gameOver = Game.gameFinished(this.props.currentWord, this.props.previousGuesses)
-    const userWins = Game.isWinner(this.props.currentWord, this.props.previousGuesses)
-    const userLoses = Game.wrongGuessLimit(this.props.currentWord, this.props.previousGuesses)
-
+    const tp = this.props
+    const gameOver = Game.gameFinished(tp.currentWord, tp.previousGuesses)
+    const userWins = Game.isWinner(tp.currentWord, tp.previousGuesses)
+    const userLoses = Game.wrongGuessLimit(tp.currentWord, tp.previousGuesses)
+    const prevGuesses = tp.previousGuesses.map((x,i)=>{
+      return (
+        <span key = {i}> <b> {x}</b> </span>
+      )
+    })
     return (
       <div>
         <p>{gameOver ? "Game Finished" : "Game Goes On" }</p>
@@ -16,10 +21,13 @@ class GameStatusContainer extends React.PureComponent{
                   userLoses ?
                     <div>
                       <p>You LOSE</p> 
-                      <p>The Word Was  <b> {this.props.currentWord}</b></p>
+                      <p>The Word Was  <b> {tp.currentWord}</b></p>
                     </div>
                   : ""
           }</div>
+        <hr/>
+        <p>Your Previous Guesses</p>  
+        {prevGuesses}
       </div>
     )
   }

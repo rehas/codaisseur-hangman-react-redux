@@ -18,16 +18,25 @@ class GamePageContainer extends React.PureComponent{
   }
 
   render(){
-    console.log(this.props)
-    const gameOver = Game.gameFinished(this.props.currentWord, this.props.previousGuesses)
+    const gameOver = Game.gameFinished(
+      this.props.currentWord,
+      this.props.previousGuesses
+    )
     return (
       <div className="game-page-container">
-        <CurrentWord currentWordState = {Game.showGuess(this.props.currentWord, this.props.previousGuesses)}/>
-        <WrongGuessCount counter = {Game.wrongGuessCount(this.props.currentWord, this.props.previousGuesses)}/>
-        {gameOver? 
-          <p>Play one more time?</p> : 
-          <UserGuess/>
-        }
+        <CurrentWord 
+          currentWordState = 
+            {Game.showGuess(
+              this.props.currentWord,
+              this.props.previousGuesses)}
+        />
+        <WrongGuessCount
+          counter = 
+            {Game.wrongGuessCount(
+              this.props.currentWord,
+              this.props.previousGuesses)}
+        />
+        {gameOver? <p>Play one more time?</p> : <UserGuess/> }
         <button onClick={this.newGameButtonClicked}>NEW GAME</button>
         <div className="status-controller">
           <GameStatusContainer/>

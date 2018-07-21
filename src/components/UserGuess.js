@@ -4,11 +4,9 @@ import * as Game from '../lib/game'
 
 export default class UserGuess extends React.PureComponent{
   handleChange(event){
-    // console.log(event.target.value)
     if (event.target.value.length > 1){
-      // console.log("max input is 1 character")
-      // alert("max input is 1 character")
       event.target.value = event.target.value.slice(0,1)
+      console.log("1 letter at a time :), That's why it's not happening :)")
       return 
     }
   }
@@ -16,25 +14,26 @@ export default class UserGuess extends React.PureComponent{
   handleSubmit(event){
     event.preventDefault();
     const newGuess = event.target.guessedCharacter.value;
-    // Check if the user is sending empty character
     if(newGuess === "" || newGuess === '' || newGuess === ' ' ){
       event.target.guessedCharacter.value = ''
+      alert("There are no spaces in our word don't worry :)")
       return
     }
 
     if(newGuess.match(/[^a-z|^A-Z|]/)){
-      // alert('its an a')
       event.target.guessedCharacter.value = ''
+      alert("Only alphabetical characters in english please")
       return
     }
 
     const prevGuesses = store.getState().previousGuesses
 
-    console.log(prevGuesses);
-    console.log(prevGuesses.indexOf(newGuess));
-    // Check if the user is sending a character which is guessed before
     if (prevGuesses.indexOf(newGuess) > -1 ){
       event.target.guessedCharacter.value = ''
+      alert(`
+      If there are more than one occurences of the letter, 
+      we display them all
+      No need to make the same guess :)`)
       return 
     }
     store.dispatch(Game.makeGuess(newGuess))
@@ -43,13 +42,14 @@ export default class UserGuess extends React.PureComponent{
   
   render(){
     return (
-      <div>
+      <div className="user-guess">
         <form onSubmit={this.handleSubmit}>
-          <label> Guess 
+          <label>
             <input 
               type="text" 
               onChange={this.handleChange}
               name = "guessedCharacter"
+              placeholder="Enter A Character Here"
             />
           </label>
           <input type="submit" value="Guess"/>

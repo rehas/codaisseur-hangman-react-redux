@@ -9,6 +9,5 @@ export default (state = initialState, action = {}) => {
   if (action.type === NEW_GAME){
     return []
   }
-
   return state
 }
