@@ -5,7 +5,6 @@ import store from '../store'
 import GameStatusContainer from './GameStatusContainer'
 import UserGuess from '../components/UserGuess'
 import CurrentWord from '../components/CurrentWord'
-import WrongGuessCount from '../components/WrongGuessCount'
 
 class GamePageContainer extends React.PureComponent{
 
@@ -30,12 +29,7 @@ class GamePageContainer extends React.PureComponent{
               this.props.currentWord,
               this.props.previousGuesses)}
         />
-        <WrongGuessCount
-          counter = 
-            {Game.wrongGuessCount(
-              this.props.currentWord,
-              this.props.previousGuesses)}
-        />
+        
         {gameOver? <p>Play one more time?</p> : <UserGuess/> }
         <button onClick={this.newGameButtonClicked}>NEW GAME</button>
         <div className="status-controller">

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as Game from '../lib/game'
 import { connect } from 'react-redux';
+import WrongGuessCount from '../components/WrongGuessCount'
 
 class GameStatusContainer extends React.PureComponent{
   render(){
@@ -26,6 +27,14 @@ class GameStatusContainer extends React.PureComponent{
                   : ""
           }</div>
         <hr/>
+        <p>Wrong Guesses Count</p>
+        <WrongGuessCount
+          counter = 
+            {Game.wrongGuessCount(
+              tp.currentWord,
+              tp.previousGuesses)}
+        />
+
         <p>Your Previous Guesses</p>  
         {prevGuesses}
       </div>

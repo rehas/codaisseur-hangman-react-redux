@@ -1,7 +1,6 @@
 import * as React from 'react'
 
 export default function CurrentWord(props){
-  console.log(props.currentWordState)
   return (
     <div>
       <p>
