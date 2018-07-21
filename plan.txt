@@ -17,6 +17,8 @@ HangMan Game
     +The word being guessed (Chosen randomly from pool)
     +All the letters guessed so far.
   - Implement action handlers based on the game logic
+    +-NewGame sets store state to new random word
 
-HERE>>- Game Start '/hangman'
-  - Display random word from pool
+- Game Start '/hangman'
+  +- Display random word from pool
+  HERE>>- Show user input and listen to it

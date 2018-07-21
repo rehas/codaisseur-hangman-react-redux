@@ -3,6 +3,7 @@ import logo from './logo.svg'
 import './App.css'
 import {Route} from 'react-router-dom'
 import WelcomePage from './components/WelcomePage'
+import GamePageContainer from './containers/GamePageContainer'
 
 class App extends Component {
   render () {
@@ -18,6 +19,7 @@ class App extends Component {
 
         <main>
           <Route exact path = '/' component = {WelcomePage} />
+          <Route exact path = '/hangman' component = {GamePageContainer} />
         </main>
       </div>
     )

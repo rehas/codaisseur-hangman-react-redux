@@ -269,3 +269,12 @@ export const wordList = [
 export const randomWord = () => {
   return wordList[Math.floor(Math.random() * wordList.length)]
 }
+
+export const NEW_GAME = 'NEW_GAME'
+
+export function newGame(){
+  return {
+    type: NEW_GAME,
+    payload: randomWord()
+  }
+} 
