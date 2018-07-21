@@ -15,9 +15,9 @@ class GameStatusContainer extends React.PureComponent{
       )
     })
     return (
-      <div>
+      <div className="game-status">
         <p>{gameOver ? "Game Finished" : "Game Goes On" }</p>
-        <div>{ userWins ?  
+        <div className="win-lose">{ userWins ?  
                 "You WIN" : 
                   userLoses ?
                     <div>

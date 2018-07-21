@@ -31,7 +31,7 @@ class GamePageContainer extends React.PureComponent{
         />
         
         {gameOver? <p>Play one more time?</p> : <UserGuess/> }
-        <button onClick={this.newGameButtonClicked}>NEW GAME</button>
+        <button className="new-game" onClick={this.newGameButtonClicked}>NEW GAME</button>
         <div className="status-controller">
           <GameStatusContainer/>
         </div>

@@ -6,8 +6,12 @@ export default class WelcomePage extends PureComponent{
   render(){
     return (
       <div className="welcome-page">
+        <p className="App-intro">
+      To get started, click <code>Start Game Link</code> and have fun guessing.
+        </p>
+        <hr/>
         <h2>Welcome to HangMan</h2>
-        <div className="insturctions">
+        <div className="instructions">
           <ul>
             <li>You will try to guess a word by guessing the letters in it</li>
             <li>First you will see the word outline with covered letters</li>

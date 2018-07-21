@@ -51,8 +51,9 @@ export default class UserGuess extends React.PureComponent{
               name = "guessedCharacter"
               placeholder="Enter A Character Here"
             />
+            <br/>
+            <input className="guess-button" type="submit" value="Guess"/>
           </label>
-          <input type="submit" value="Guess"/>
         </form>
       </div>
     )

@@ -13,10 +13,6 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome To Reactive Hang-Man</h1>
         </header>
-        <p className="App-intro">
-      To get started, click <code>Start Game Link</code> and have fun guessing.
-        </p>
-        <hr/>
         <main>
           <Route exact path = '/' component = {WelcomePage} />
           <Route exact path = '/hangman' component = {GamePageContainer} />
