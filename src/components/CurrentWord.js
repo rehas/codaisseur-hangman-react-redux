@@ -6,7 +6,7 @@ export default function CurrentWord(props){
     <div>
       <p>
         {props.currentWordState.split('').map((x, index)=>{
-        console.log(x);
+        // console.log(x);
           return <span key = {index}> {x} </span>
       })}
       </p>

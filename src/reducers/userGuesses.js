@@ -1,5 +1,4 @@
-import { MAKE_GUESS } from "../lib/game";
-import * as Game from '../lib/game'
+import { MAKE_GUESS, NEW_GAME } from "../lib/game";
 
 const initialState = {
   remainingGuessCount : 6,
@@ -12,7 +11,14 @@ export default (state = initialState, action = {}) => {
       ...state,
       previousGuesses : state.previousGuesses.concat(action.payload)
     }
-
   }
+  if (action.type === NEW_GAME){
+    return {
+      ...state,
+      remainingGuessCount : 6,
+      previousGuesses : []
+    }
+  }
+
   return state
 }

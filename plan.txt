@@ -25,20 +25,32 @@ HangMan Game
     +As underscores
   +- Show user input and listen to it
       + When user enters input make sure it's only 1 character long
-        - make sure its a character, not non-character
+        HERE->- make sure its a character, not non-character
+          ('Alert user)
+        
       - When user submits the guess:
+        + make sure it doesn't exist in the previous guesses
+          ('Alert user)
         +dispatch an action to set the store state for guesses
           -if guess is right
             +re_render shown word
-          -if wrong increment wrong guess count
+          +if wrong increment wrong guess count
           +clearSubmitForm
+
++ End Scenarios
+  - User Won
+    - If there are no more underscores the user wins
+    - Mesasge the win ('Alert user)
+  - User Lost
+    - If there are still underscores but wrong guess counter is 6 user loses
+    - Message the loss ('Alert user)
 + Wrong Guess Count
   + Display the number of wrong guesses
 
-- New Game Button
-  - Reset game to new game,
-    -Pick new word
-    -Empty out the previous guesses
++ New Game Button
+  + Reset game to new game,
+    +Pick new word
+    +Empty out the previous guesses
 
 
 - Styling
