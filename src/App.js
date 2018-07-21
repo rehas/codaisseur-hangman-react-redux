@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import {Route} from 'react-router-dom'
+import WelcomePage from './components/WelcomePage'
 
 class App extends Component {
   render () {
@@ -8,11 +10,15 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome To Reactive Hang-Man</h1>
         </header>
         <p className="App-intro">
-      To get started, edit <code>src/App.js</code> and save to reload.
+      To get started, click <code>Start Game Link</code> and have fun guessing.
         </p>
+
+        <main>
+          <Route exact path = '/' component = {WelcomePage} />
+        </main>
       </div>
     )
   }
